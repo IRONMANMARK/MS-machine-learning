@@ -15,6 +15,8 @@ I am using 90% of the data to train the model and 10% the data to test the data.
 * When you run the cnn.py code after some time there will be a resource exhausted error. This is because the code is NOT meant for laptop or ordinary desktop. This cnn.py has already shrink 8 times to just be able run on a 64GB memory server. So you can try this code but it will have a resourse exhausted error after several seconds. And the code can run perfectly fine if there is proper server.
 * It will take at least a week even for that test database I provided to finish the training in a server, so the result will not be available.
 * The training time is super long so that is why I fetch fraction of the whole data.
+* When the cnn.py runing, it should look like this. The warning I got is just because I do not got enough memory on my laptop.<br>
+![image](https://github.com/IRONMANMARK/MS-machine-learning/blob/master/visualization/cnn_run_benchmark.png)
 ## database visualization
 * I am using SQLite Expert to visualize the databaze<br>
 ![image](https://github.com/IRONMANMARK/MS-machine-learning/blob/master/visualization/database_visual.png)
