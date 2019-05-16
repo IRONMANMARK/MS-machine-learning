@@ -16,6 +16,7 @@ I am using 90% of the data to train the model and 10% the data to test the data.
 * It will take at least a week even for that test database I provided to finish the training in a server, so the result will not be available.
 * The training time is super long so that is why I fetch fraction of the whole data.
 * When the cnn.py runing, it should look like this. The warning I got is just because I do not got enough memory on my laptop.<br>
+![image](https://github.com/IRONMANMARK/MS-machine-learning/blob/master/visualization/cnn_benchmark2.png)
 ![image](https://github.com/IRONMANMARK/MS-machine-learning/blob/master/visualization/cnn_run_benchmark.png)
 ## database visualization
 * I am using SQLite Expert to visualize the databaze<br>
