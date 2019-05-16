@@ -6,6 +6,7 @@ Second, the fetch_data.py will purge the raw data in the database and create two
 Finally the cnn.py will use the unique moodification sequence as an index to pick out the mass spectrum data that belong to a specific peptide and put it in a matrix and use this matrix to train the model once at a time.<br>
 I am using 90% of the data to train the model and 10% the data to test the data.
 ## how to use
+* These code run under Python 3.6
 * first run the library.py to generate the raw data database from mgf file.
 * second run the fetch data to select part of the peptide data in the databse and generate the unique peptide sequence table and modification table.
 * third run the cnn.py which using the unique peptide sequence index to extract the specific data out. And using the data to train the model.
