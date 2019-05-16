@@ -8,24 +8,7 @@ import numpy as np
 from tqdm import tqdm
 import sqlite3
 
-# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-# #
-# #
-# a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
-# b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
-# c = tf.matmul(a, b)
-# sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
-# print(sess.run(c))
 
-# count = 0
-# with open(file_l) as p:
-#     for line_ in tqdm(p):
-#         lines_ = line_.strip('\n')
-#         if lines_ == 'BEGIN IONS':
-#             count += 1
-#         else:
-#             continue
-# print(count)
 
 def read_library(file, database):
     '''
