@@ -78,12 +78,12 @@ def deco_cnn_result_list(database):
     # create CNN model
     model = Sequential()
 
-    model.add(Convolution1D(nb_filter=128, filter_length=1, input_shape=(4684, 1)))
+    model.add(Convolution1D(nb_filter=32, filter_length=1, input_shape=(4684, 1)))
     model.add(Activation('relu'))
     model.add(Flatten())
     model.add(Dropout(0.4))
-    model.add(Dense(512, activation='relu'))
-    model.add(Dense(256, activation='relu'))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dense(32, activation='relu'))
     model.add(Dense(7))
     model.add(Activation('softmax'))
     sgd = SGD(lr=0.01, nesterov=True, decay=1e-6, momentum=0.9)
@@ -141,8 +141,12 @@ def deco_cnn_result_list(database):
             x_fit.append(np.expand_dims(np.array(data_mz), axis=1))
             result = model.evaluate(np.array([np.expand_dims(np.array(data_mz), axis=1)]),
                       np.expand_dims(np.array(on_hot_sub), axis=0))
-            file2.write(result)
-
+            predection = model.predict(np.array([np.expand_dims(np.array(data_mz), axis=1)]))
+            file2.write('\nevaluation: %s %s\n' % (result[0], result[1]))
+            file2.write('prediction:\n')
+            for i in predection[0]:
+                file2.write('%s\t' % i)
+            # file2.write(result)
 
 if __name__ == "__main__":
-    print(deco_cnn_result_list('test4.db'))
+    print(deco_cnn_result_list('test5.db'))
